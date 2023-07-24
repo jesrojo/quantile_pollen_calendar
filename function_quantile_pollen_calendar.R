@@ -73,8 +73,6 @@ quantile.pollen.calendar <- function(data, y1, y2, q = c(80, 90, 92.5, 95, 97.5,
   
 }  
 
-cal <- quantile.pollen.calendar(data = df, y1 = 2019, y2 = 2022, q = c(85, 90, 95, 99))
-plot(cal)
 
 
   
