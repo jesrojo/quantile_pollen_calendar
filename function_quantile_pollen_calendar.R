@@ -3,7 +3,7 @@ library(scales)
 library(tidyverse)
 library(RColorBrewer)
 
-quantile.pollen.calendar <- function(data, y1, y2, q = c(80, 90, 92.5, 95, 97.5, 99, 99.5), p = 90, lg = 4, inpntype = 16){  
+quantile.pollen.calendar <- function(df, y1, y2, q = c(80, 90, 92.5, 95, 97.5, 99, 99.5), p = 90, lg = 4, inpntype = 16){  
   abun.ord <- iplot_abundance(df, interpolation = F, n.types = as.numeric(length(unique(colnames(df)))))$data
   typesel <- as.vector(abun.ord$types[order(abun.ord$mean, decreasing = T)][1:inpntype])
   
